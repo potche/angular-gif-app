@@ -1,23 +1,21 @@
 import { Component } from '@angular/core';
+import { Character } from '../interfaces/character.interface';
 
 @Component({
   selector: 'app-dbz-main-page',
   templateUrl: './main-page.component.html',
 })
 export class MainPageComponent {
-  public title = 'counter-component';
-  public counter: number = 10;
+  public characters: Character[] = [
+    {
+      name: 'Krillin',
+      power: 1000,
+    },
+    {
+      name: 'Goku',
+      power: 9500,
+    },
+  ];
 
-  constructor() {
-
-  }
-
-
-  increaseBy(value: number) {
-    this.counter += value;
-  }
-
-  resetCounter() {
-    this.counter = 10
-  }
+  constructor() {}
 }
