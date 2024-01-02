@@ -9,6 +9,7 @@ export class AddCharacterComponent {
   @Output()
   public onNewCharacter: EventEmitter<Character> = new EventEmitter();
   private initCharacter: Character = {
+    id: '',
     name: '',
     power: 0,
   };

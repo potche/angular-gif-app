@@ -11,12 +11,12 @@ export class ListComponent {
   @Input()
   public characters: Character[] = [];
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
   constructor() {}
 
-  onDeleteCharacter(index: number): void {
-    console.log({ index });
-    this.onDelete.emit(index);
+  onDeleteCharacter(id: string): void {
+    console.log({ id });
+    this.onDelete.emit(id);
   }
 }
