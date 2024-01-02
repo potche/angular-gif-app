@@ -18,4 +18,13 @@ export class MainPageComponent {
   ];
 
   constructor() {}
+
+  onNewCharacter(character: Character) {
+    console.log(character);
+    this.characters.push(character);
+  }
+
+  onDeleteCharacter(index: number) {
+    this.characters.splice(index, 1);
+  }
 }
